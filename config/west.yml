@@ -4,17 +4,23 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: grassfedreeve                         # <---
-      url-base: https://github.com/grassfedreeve  # <---
+    # - name: grassfedreeve                         # <---
+    #   url-base: https://github.com/grassfedreeve  # <---
+    - name: avillega # <---
+      url-base: https://github.com/avillega # <---
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: svalboard-zmk-module
-      url: https://github.com/grassfedreeve/svalboard-zmk-module
+    # - name: svalboard-zmk-module
+    #   url: https://github.com/grassfedreeve/svalboard-zmk-module
+    #   revision: trackballs
+    #   path: modules/svalboard-zmk-module
+    - name: svalboard-zmk-module-fork
+      url: https://github.com/avillega/svalboard-zmk-module
       revision: trackballs
-      path: modules/svalboard-zmk-module
+      path: modules/svalboard-zmk-module-fork
   self:
     path: config
